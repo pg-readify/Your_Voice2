@@ -122,7 +122,7 @@ server <- function(input, output, session) {
        values$qns$bad_comment[ii] <- isolate(input$the_bad)
        if((isolate(values$qns$good_comment[ii]) != "") && (isolate(values$qns$bad_comment[ii]) != "") && (isolate(values$qns$score[ii]) != 0)){
          values$qns$completed[ii] <- 1
-         values$qns$label[ii] <- paste0(isolate(values$qns_orig$label[ii]), "-done")
+         values$qns$image[ii] <- "https://raw.githubusercontent.com/pg-readify/Your_Voice2/master/files/done.png"
          values$visNet <- create_survey(isolate(values$qns))
          output$treePlot <- renderVisNetwork({
            isolate(values$visNet)
