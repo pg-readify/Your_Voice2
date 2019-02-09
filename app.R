@@ -100,7 +100,7 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   
   values <- reactiveValues()
-  values$qns <- read.csv("https://raw.githubusercontent.com/pg-readify/Your_Voice2/master/images/questionaire.csv", stringsAsFactors = F)
+  values$qns <- read.csv("https://raw.githubusercontent.com/pg-readify/Your_Voice2/master/files/questionaire.csv", stringsAsFactors = F)
   values$qns_orig <- isolate(values$qns)
   values$node_id <- ""
   values$node_label <- ""
